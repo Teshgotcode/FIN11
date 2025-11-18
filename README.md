@@ -1,36 +1,35 @@
 # FIN11: Holiday Effects on Oslo Børs Microstructure
 
-This repository offers a robust Jupyter notebook for analyzing bid-ask spreads and trading volume on the Oslo Stock Exchange with a focus on public holidays and summer vacation periods.
+This repository contains an advanced Jupyter notebook for empirical analysis of bid-ask spreads and trading volume on the Oslo Stock Exchange, with particular emphasis on effects around public holidays and the summer vacation period. The code was developed for a FIN11 term paper and features fully automated data processing and robust statistical inference.
 
 ## Main Features
 
-- **Spread estimator selection:** Choose between Corwin-Schultz (CS, 2012) and Abdi-Ranaldo (AR, 2017) methods, settable at the top of the notebook.
-- **Event period assignment:** Automatically tags trading dates as holiday or control periods (Christmas, Easter, summer).
-- **Multiple testing correction:** All statistical comparisons use Bonferroni-corrected p-values for strict inference.  
-  - FDR (Benjamini-Hochberg) is also included in output tables for reference, but **only Bonferroni is used in main results**.
-- **Visualizations:** Includes pointplots, barplots, and heatmaps of period/comparison group effects.
-- **Regression analysis:** Panel regressions analyze spread determinants, with clear controls for robustness.
-- **Robustness checks:** Methods provided to exclude COVID-19 years and compare estimator results.
+- **Spread estimator selection:** Use either Corwin-Schultz (CS, 2012) or Abdi-Ranaldo (AR, 2017). Select your method at the top of the notebook.
+- **Automatic period tagging:** Trading days are labeled as either control or event periods (Christmas, Easter, summer) using strict calendrical logic.
+- **Stringent hypothesis testing:** All comparisons implement Bonferroni correction for familywise error. FDR (Benjamini-Hochberg) is also reported for reference, but only Bonferroni governs main results.
+- **Visualizations:** Includes point plots, bar plots, and heatmaps summarizing effect sizes for each period or group.
+- **Panel regression:** Fixed-effects panel regressions analyze the determinants of spreads, with thorough controls for volatility and trading volume patterns.
+- **Robustness checks:** Options to exclude COVID-19 years and compare results across spread estimators are included.
 
 ## Usage
 
-- Automatically downloads data for all Norwegian stocks (2014–2024) from Yahoo Finance (ticker lists grouped by market cap).
-- Spread and liquidity metrics, event labeling, and statistical output are fully automated.
-- Well-commented code for clarity and extensibility.
+- Downloads data automatically for all Norwegian stocks (2014–2024) from Yahoo Finance, grouped by market capitalization.
+- Spread and liquidity metrics, event assignment, and full statistical output are streamlined and thoroughly commented for easy extension.
+- Output includes exported tables as well as figures from regression and hypothesis test analyses.
 
 ## Estimator Options
 
-Corwin-Schultz (CS) and Abdi-Ranaldo (AR) provide alternative, robust ways to estimate bid-ask spreads from daily price data. Select your preferred approach by changing a flag at the start.
+Corwin-Schultz (CS) and Abdi-Ranaldo (AR) offer complementary approaches for estimating bid-ask spreads from daily price data. Method selection is made via a simple flag.
 
 ## Multiple Testing Correction
 
-All event-based hypothesis tests are corrected for familywise error using Bonferroni.  
-- FDR-corrected p-values are shown for reference, but **not used for formal inference**.
+All event-driven hypothesis tests employ strict Bonferroni correction—FDR is reported for transparency only. Tables include both sets of p-values.
+
+## Robustness and Extensibility
+
+- Option to exclude COVID-19 years and validate sensitivity to estimator choice or input series.
+- Panel regression outputs are formatted for further academic analysis or publication.
 
 ## Intended Audience
 
-This code was originally developed for a term paper in the course FIN11.  
-It is used to validate the empirical analysis and findings described in the paper, but can also serve as a foundation for further research on Norwegian market microstructure around holidays and event periods.
-
-
----
+The notebook is suited for students and researchers in finance, quantitative analysis, or market microstructure, as well as practitioners interested in event-driven transaction cost analysis on the Oslo Stock Exchange.
