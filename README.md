@@ -1,4 +1,4 @@
-# FIN11: Holiday Effects on Oslo Børs Microstructure
+# FIN11: Holiday Effects on Oslo Exchange Microstructure
 
 This repository contains an advanced Jupyter notebook for empirical analysis of bid-ask spreads and trading volume on the Oslo Stock Exchange, with particular emphasis on effects around public holidays and the summer vacation period. The code was developed for a FIN11 term paper and features fully automated data processing and robust statistical inference.
 
