@@ -1,35 +1,36 @@
 # FIN11: Holiday Effects on Oslo Exchange Microstructure
 
-This repository contains an advanced Jupyter notebook for empirical analysis of bid-ask spreads and trading volume on the Oslo Stock Exchange, with particular emphasis on effects around public holidays and the summer vacation period. The code was developed for a FIN11 term paper and features fully automated data processing and robust statistical inference.
+This repository contains a sophisticated Jupyter notebook for empirical research on the Oslo Stock Exchange. It focuses on analyzing bid-ask spreads and trading volumes with respect to calendar-driven events, such as Christmas, Easter, and the summer holiday period. The notebook automates all data processing and statistical inference, supporting rigorous academic or practitioner analysis.
 
-## Main Features
+## Key Features
 
-- **Spread estimator selection:** Use either Corwin-Schultz (CS, 2012) or Abdi-Ranaldo (AR, 2017). Select your method at the top of the notebook.
-- **Automatic period tagging:** Trading days are labeled as either control or event periods (Christmas, Easter, summer) using strict calendrical logic.
-- **Stringent hypothesis testing:** All comparisons implement Bonferroni correction for familywise error. FDR (Benjamini-Hochberg) is also reported for reference, but only Bonferroni governs main results.
-- **Visualizations:** Includes point plots, bar plots, and heatmaps summarizing effect sizes for each period or group.
-- **Panel regression:** Fixed-effects panel regressions analyze the determinants of spreads, with thorough controls for volatility and trading volume patterns.
-- **Robustness checks:** Options to exclude COVID-19 years and compare results across spread estimators are included.
+- **Spread Estimator Options:**  
+  Choose between Corwin-Schultz (2012) and Abdi-Ranaldo (2017) spread estimators using an intuitive notebook flag.
 
-## Usage
+- **Automated Holiday/Event Tagging:**  
+  Trading days are strictly classified as control or event periods (Christmas, Easter, summer) using Norwegian holiday calendars and well-documented calendar logic.
 
-- Downloads data automatically for all Norwegian stocks (2014–2024) from Yahoo Finance, grouped by market capitalization.
-- Spread and liquidity metrics, event assignment, and full statistical output are streamlined and thoroughly commented for easy extension.
-- Output includes exported tables as well as figures from regression and hypothesis test analyses.
+- **Advanced Hypothesis Testing:**  
+  All statistical comparisons use a Bonferroni correction for familywise error rate (FWER). FDR (Benjamini-Hochberg) values are also reported for transparency, but only Bonferroni governs the main conclusions.
 
-## Estimator Options
+- **Visualizations:**  
+  High-quality plots and heatmaps summarize the effect sizes and statistical significance for all periods, groups, and main estimates.
 
-Corwin-Schultz (CS) and Abdi-Ranaldo (AR) offer complementary approaches for estimating bid-ask spreads from daily price data. Method selection is made via a simple flag.
+- **Panel Regression and Robustness:**  
+  Fixed-effects panel regressions investigate determinants of spread, controlling for volatility and volume. Robustness checks enable you to exclude COVID-19 years or compare estimator choices.
 
-## Multiple Testing Correction
+- **Execution/Backtesting Component:**  
+  For recent years, the notebook simulates market-order versus limit-order strategies to quantify the liquidity premium and actual cost savings of trading during the summer period.
 
-All event-driven hypothesis tests employ strict Bonferroni correction—FDR is reported for transparency only. Tables include both sets of p-values.
+## How to Use
 
-## Robustness and Extensibility
-
-- Option to exclude COVID-19 years and validate sensitivity to estimator choice or input series.
-- Panel regression outputs are formatted for further academic analysis or publication.
+- The notebook downloads and processes all Norwegian equity data (2014–2024) directly from Yahoo Finance.
+- Spread estimation, event tagging, output generation, and summary visualizations are fully automated.
+- All code cells are thoroughly commented for clarity and extension.
 
 ## Intended Audience
 
-The notebook is suited for students and researchers in finance, quantitative analysis, or market microstructure, as well as practitioners interested in event-driven transaction cost analysis on the Oslo Stock Exchange.
+This tool is designed for students, researchers, and practitioners interested in market microstructure, transaction costs, and calendar effects in Norwegian equity markets.
+
+
+**For details on figures, regression outputs, and code usage, see the Code and Output in this repository.**
