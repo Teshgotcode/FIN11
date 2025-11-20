@@ -1,0 +1,17 @@
+
+FINAL REPORT: EXECUTION STRATEGY ANALYSIS (HARRIS THEORY)
+--------------------------------------------------------------
+1. THEORETICAL FRAMEWORK
+   - Tested "Trader's Dilemma": Paying for Immediacy (Market Orders) 
+     vs. Risking Non-Execution for Price Improvement (Limit Orders).
+   - Focus: Reducing Transaction Costs (TCA) in the Summer Period.
+
+2. RESULTS (2020-2024)
+   - Average Cost (Aggressive): 64.7 bps
+   - Average Cost (Passive):    45.8 bps
+   - Net Improvement (Alpha):   18.9 bps
+
+3. ECONOMIC SIGNIFICANCE
+   - By using Passive Limit Orders instead of Aggressive Market Orders during
+     the summer, the investor captured a "Liquidity Premium".
+   - Total Estimated Savings (spread capture): 9,441 NOK
